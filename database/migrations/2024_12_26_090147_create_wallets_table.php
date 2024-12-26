@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('wallets', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('wallet_type_id');
+            $table->uuid('id')->primary();
+            // $table->unsignedBigInteger('user_id');
+            // $table->unsignedBigInteger('wallet_type_id');
             $table->string('name');
             $table->string('balance')->default(0.00);
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('wallet_type_id')->references('id')->on('wallet_types')->onDelete('cascade');
+            $table->foreignUuid('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignUuid('wallet_type_id')->references('id')->on('wallet_types')->onDelete('cascade');
 
             $table->timestamps();
         });

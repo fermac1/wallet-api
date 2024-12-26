@@ -1,0 +1,474 @@
+{
+	"info": {
+		"_postman_id": "a672f9fb-9a80-49ee-b75c-a245d86d883e",
+		"name": "wallet",
+		"description": "This application allows users to have multiple wallets, with each wallet associated with a specific wallet type. Each wallet type defines properties like its name, minimum balance and monthly interest rate. Users can send and receive money from other wallets, enabling simple financial transactions.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22582639"
+	},
+	"item": [
+		{
+			"name": "All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Fetch all users in the system"
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 26 Dec 2024 10:14:09 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 26 Dec 2024 10:14:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Marjory Jaskolski\",\n        \"email\": \"berge.merritt@example.org\",\n        \"email_verified_at\": \"2024-12-25T20:34:05.000000Z\",\n        \"created_at\": \"2024-12-25T20:34:05.000000Z\",\n        \"updated_at\": \"2024-12-25T20:34:05.000000Z\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Lew Emard\",\n        \"email\": \"pasquale57@example.org\",\n        \"email_verified_at\": \"2024-12-25T20:34:05.000000Z\",\n        \"created_at\": \"2024-12-25T20:34:05.000000Z\",\n        \"updated_at\": \"2024-12-25T20:34:05.000000Z\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Mrs. Hailee Davis MD\",\n        \"email\": \"hulda.conn@example.org\",\n        \"email_verified_at\": \"2024-12-25T20:34:05.000000Z\",\n        \"created_at\": \"2024-12-25T20:34:05.000000Z\",\n        \"updated_at\": \"2024-12-25T20:34:05.000000Z\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Kenton Hilpert III\",\n        \"email\": \"roxane.bode@example.org\",\n        \"email_verified_at\": \"2024-12-25T20:34:05.000000Z\",\n        \"created_at\": \"2024-12-25T20:34:05.000000Z\",\n        \"updated_at\": \"2024-12-25T20:34:05.000000Z\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Mrs. Isabelle Sawayn\",\n        \"email\": \"amina76@example.com\",\n        \"email_verified_at\": \"2024-12-25T20:34:05.000000Z\",\n        \"created_at\": \"2024-12-25T20:34:05.000000Z\",\n        \"updated_at\": \"2024-12-25T20:34:05.000000Z\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Madge Goodwin\",\n        \"email\": \"omari15@example.com\",\n        \"email_verified_at\": \"2024-12-25T20:34:05.000000Z\",\n        \"created_at\": \"2024-12-25T20:34:05.000000Z\",\n        \"updated_at\": \"2024-12-25T20:34:05.000000Z\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Josefina Aufderhar\",\n        \"email\": \"blueilwitz@example.org\",\n        \"email_verified_at\": \"2024-12-25T20:34:05.000000Z\",\n        \"created_at\": \"2024-12-25T20:34:05.000000Z\",\n        \"updated_at\": \"2024-12-25T20:34:05.000000Z\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Betsy Glover\",\n        \"email\": \"roderick.boyle@example.com\",\n        \"email_verified_at\": \"2024-12-25T20:34:05.000000Z\",\n        \"created_at\": \"2024-12-25T20:34:06.000000Z\",\n        \"updated_at\": \"2024-12-25T20:34:06.000000Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "All Wallets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Fetch all wallets in the system."
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/wallets",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"wallets"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 26 Dec 2024 10:52:50 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 26 Dec 2024 10:52:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"user_id\": 5,\n        \"wallet_type_id\": 1,\n        \"name\": \"cum\",\n        \"balance\": \"590.11\",\n        \"created_at\": \"2024-12-25T20:34:06.000000Z\",\n        \"updated_at\": \"2024-12-25T20:36:08.000000Z\"\n    },\n    {\n        \"id\": 2,\n        \"user_id\": 6,\n        \"wallet_type_id\": 2,\n        \"name\": \"aut\",\n        \"balance\": \"940.3\",\n        \"created_at\": \"2024-12-25T20:34:06.000000Z\",\n        \"updated_at\": \"2024-12-26T10:52:15.000000Z\"\n    },\n    {\n        \"id\": 3,\n        \"user_id\": 7,\n        \"wallet_type_id\": 3,\n        \"name\": \"ipsam\",\n        \"balance\": \"133.58\",\n        \"created_at\": \"2024-12-25T20:34:06.000000Z\",\n        \"updated_at\": \"2024-12-26T10:52:15.000000Z\"\n    },\n    {\n        \"id\": 4,\n        \"user_id\": 8,\n        \"wallet_type_id\": 4,\n        \"name\": \"harum\",\n        \"balance\": \"633.93\",\n        \"created_at\": \"2024-12-25T20:34:06.000000Z\",\n        \"updated_at\": \"2024-12-25T20:34:06.000000Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Single Wallet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Get the details of a specific wallet including its owner, wallet type, and available balance."
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/wallets/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"wallets",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 26 Dec 2024 10:54:36 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 26 Dec 2024 10:54:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"user_id\": 7,\n    \"wallet_type_id\": 3,\n    \"name\": \"ipsam\",\n    \"balance\": \"133.58\",\n    \"created_at\": \"2024-12-25T20:34:06.000000Z\",\n    \"updated_at\": \"2024-12-26T10:52:15.000000Z\",\n    \"user\": {\n        \"id\": 7,\n        \"name\": \"Josefina Aufderhar\",\n        \"email\": \"blueilwitz@example.org\",\n        \"email_verified_at\": \"2024-12-25T20:34:05.000000Z\",\n        \"created_at\": \"2024-12-25T20:34:05.000000Z\",\n        \"updated_at\": \"2024-12-25T20:34:05.000000Z\"\n    },\n    \"wallet_type\": {\n        \"id\": 3,\n        \"name\": \"nulla\",\n        \"minimum_balance\": \"78.76\",\n        \"monthly_interest_rate\": \"0.05\",\n        \"created_at\": \"2024-12-25T20:34:05.000000Z\",\n        \"updated_at\": \"2024-12-25T20:34:05.000000Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Send Money",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sender_wallet_id\": 1,\r\n    \"receiver_wallet_id\": 2,\r\n    \"amount\": 100\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/transactions/send",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transactions",
+						"send"
+					]
+				},
+				"description": "Transfer money from one wallet to another"
+			},
+			"response": [
+				{
+					"name": "Unsuccessful Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sender_wallet_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "receiver_wallet_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "54",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/transactions/send",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"transactions",
+								"send"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 26 Dec 2024 15:39:33 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 26 Dec 2024 15:39:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Insufficient funds or below minimum balance\"\n}"
+				},
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sender_wallet_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "receiver_wallet_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "54",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/transactions/send",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"transactions",
+								"send"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 26 Dec 2024 15:41:15 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 26 Dec 2024 15:41:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"sender_wallet_id\": 3,\n    \"receiver_wallet_id\": 2,\n    \"amount\": \"54\",\n    \"updated_at\": \"2024-12-26T15:41:15.000000Z\",\n    \"created_at\": \"2024-12-26T15:41:15.000000Z\",\n    \"id\": 17\n}"
+				}
+			]
+		}
+	]
+}

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('wallet_types', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->string('name');
             $table->decimal('minimum_balance', 15, 2);
             $table->decimal('monthly_interest_rate', 5, 2);
