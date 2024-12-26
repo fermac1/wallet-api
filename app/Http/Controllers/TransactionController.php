@@ -22,7 +22,7 @@ class TransactionController extends Controller
 
             // Check if sender has enough balance
             if (($senderWallet->balance < $amount) || ($senderWallet->balance - $amount) < $senderWallet->walletType->minimum_balance) {
-                return response()->json(['message' => 'Insufficient funds'], 400);
+                return response()->json(['message' => 'Insufficient funds or below minimum balance'], 400);
             }
 
             // Deduct from sender wallet and add to receiver wallet
