@@ -6,7 +6,7 @@ The system supports sending and receiving money between wallets.
 
 ## Features
 - User Management: Users can have multiple wallets.
-- Wallet Types: Each wallet type has a name, minimum balance, and monthly interest rate.
+- Wallet Types: Each wallet type has a name, minimum balance and monthly interest rate.
 - Transactions: Wallets can send and receive money to/from other wallets.
 
 ## Requirements
@@ -16,7 +16,7 @@ The system supports sending and receiving money between wallets.
 
 ## Installation
 To install and set up the application, follow these steps:
-1. Clone the repository from GitHub.
+1. Clone the repository.
 2. Run `composer install` to install the project dependencies.
 3. Copy the `.env.example` file to `.env` and configure your database connection.
 4. Run `php artisan key:generate` to generate a new application key.
